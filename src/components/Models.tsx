@@ -161,11 +161,6 @@ const models: Model[] = [
   },
 ];
 
-const branches = [
-  { name: "Banjarbaru & Banjarmasin", phone: "6282168899800" },
-  { name: "Batulicin", phone: "6281253918000" },
-];
-
 const Models = () => {
   // state untuk modal
   const [open, setOpen] = React.useState(false);
@@ -183,13 +178,13 @@ const Models = () => {
   };
 
   return (
-    <section id="kendaraan" className="py-20 bg-background">
+    <section id="kendaraan" className="py-8 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
             <span className="text-primary text-sm font-semibold uppercase tracking-wide">
-              Model & Promo
+              Kendaraan
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -231,11 +226,14 @@ const Models = () => {
           {models.map((model, index) => (
             <Card
               key={index}
-              className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group animate-scale-in"
+              className="overflow-hidden hover:shadow-2xl transition-all duration-300 group animate-scale-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Model image */}
-              <div className="aspect-[4/3] bg-background relative overflow-hidden">
+              <div
+                className="aspect-[4/3] bg-background relative overflow-hidden cursor-pointer"
+                onClick={() => open3D(model)}
+              >
                 {/* tombol 3D di atas gambar */}
                 <Button
                   size="sm"
@@ -353,12 +351,12 @@ const Models = () => {
               frames={activeModel?.frames ?? []}
               height={420}
               autoSpin={false}
-              spinFps={90}
+              spinFps={120}
+              dragSensitivity={0.1}
             />
             {!activeModel?.frames?.length && (
               <p className="mt-3 text-sm text-muted-foreground">
-                Model ini belum memiliki rangkaian gambar 3D. Tambahkan array
-                frames agar preview aktif.
+                Model ini belum memiliki rangkaian gambar 3D.
               </p>
             )}
           </div>

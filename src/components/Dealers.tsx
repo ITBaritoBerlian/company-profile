@@ -4,14 +4,8 @@ import { MapPin, Phone, Navigation, MessageCircle } from "lucide-react";
 import { dealers } from "@/data/dealers";
 
 const Dealers = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
   return (
-    <section id="dealer" className="py-20 bg-muted/30 relative overflow-hidden">
+    <section id="dealer" className="py-8 bg-muted/30 relative overflow-hidden">
       <div className="absolute inset-0 chevron-accent opacity-20" />
 
       <div className="container mx-auto px-4 relative z-10">
@@ -65,7 +59,7 @@ const Dealers = () => {
                     className="w-full gap-2 justify-start"
                     onClick={() =>
                       window.open(
-                        `https://wa.me/62${dealer.whatsappService.replace(
+                        `https://wa.me/${dealer.whatsappService.replace(
                           /^0/,
                           ""
                         )}`,
@@ -84,7 +78,7 @@ const Dealers = () => {
                     className="w-full gap-2 justify-start"
                     onClick={() =>
                       window.open(
-                        `https://wa.me/62${dealer.whatsappSales.replace(
+                        `https://wa.me/${dealer.whatsappSales.replace(
                           /^0/,
                           ""
                         )}`,
@@ -103,7 +97,7 @@ const Dealers = () => {
                     className="w-full gap-2 justify-start"
                     onClick={() =>
                       window.open(
-                        `https://wa.me/62${dealer.whatsappBooking.replace(
+                        `https://wa.me/${dealer.whatsappBooking.replace(
                           /^0/,
                           ""
                         )}`,

@@ -1,32 +1,29 @@
+import { scrollToSection } from "@/lib/utils";
 import { Instagram, Phone, Mail, MapPin } from "lucide-react";
+import logo from "@/assets/BBM-LOGO.png";
 
 const Footer = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <footer className="bg-secondary text-secondary-foreground">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-12 h-12 bg-primary rounded-md flex items-center justify-center">
-                <span className="text-primary-foreground font-oswald font-bold text-xl">BBM</span>
+            {/* Logo */}
+            <div className="flex items-center space-x-3">
+              <div className="w-14 h-14">
+                <img src={logo} alt="Logo PT BARITO BERLIAN MOTOR" />
               </div>
-              <div>
+              <div className="block">
                 <div className="font-oswald font-bold text-lg leading-tight">
-                  PT BARITO BERLIAN
+                  PT BARITO BERLIAN MOTOR
                 </div>
-                <div className="text-xs text-secondary-foreground/70">MOTOR</div>
               </div>
             </div>
             <p className="text-sm text-secondary-foreground/80 leading-relaxed mb-4">
-              Dealer resmi Mitsubishi Motors & FUSO di Kalimantan. Melayani penjualan, servis, suku cadang, dan bodi & cat dengan standar kualitas terbaik.
+              Dealer resmi Mitsubishi Motors & FUSO di Kalimantan. Melayani
+              penjualan, perawatan kendaraan, suku cadang, dan bodi & cat dengan
+              standar kualitas terbaik.
             </p>
             <div className="flex gap-3">
               <a
@@ -42,22 +39,24 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-oswald font-bold text-lg mb-4">Navigasi Cepat</h3>
+            <h3 className="font-oswald font-bold text-lg mb-4">
+              Navigasi Cepat
+            </h3>
             <ul className="space-y-3">
-              <li>
-                <button
-                  onClick={() => scrollToSection("model-promo")}
-                  className="text-sm text-secondary-foreground/80 hover:text-primary transition-colors"
-                >
-                  Model & Promo
-                </button>
-              </li>
               <li>
                 <button
                   onClick={() => scrollToSection("layanan")}
                   className="text-sm text-secondary-foreground/80 hover:text-primary transition-colors"
                 >
                   Layanan
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection("kendaraan")}
+                  className="text-sm text-secondary-foreground/80 hover:text-primary transition-colors"
+                >
+                  Kendaraan
                 </button>
               </li>
               <li>
@@ -77,14 +76,12 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <a href="#" className="text-sm text-secondary-foreground/80 hover:text-primary transition-colors">
-                  Karier
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-secondary-foreground/80 hover:text-primary transition-colors">
-                  Kebijakan Privasi
-                </a>
+                <button
+                  onClick={() => scrollToSection("kontak")}
+                  className="text-sm text-secondary-foreground/80 hover:text-primary transition-colors"
+                >
+                  Hubungi Kami
+                </button>
               </li>
             </ul>
           </div>
@@ -125,7 +122,9 @@ const Footer = () => {
 
           {/* Business Hours */}
           <div>
-            <h3 className="font-oswald font-bold text-lg mb-4">Jam Operasional</h3>
+            <h3 className="font-oswald font-bold text-lg mb-4">
+              Jam Operasional
+            </h3>
             <ul className="space-y-3 text-sm text-secondary-foreground/80">
               <li className="flex justify-between">
                 <span>Senin - Jumat</span>
@@ -133,15 +132,16 @@ const Footer = () => {
               </li>
               <li className="flex justify-between">
                 <span>Sabtu</span>
-                <span className="font-semibold">08:00 - 16:00</span>
+                <span className="font-semibold">08:00 - 15:00</span>
               </li>
-              <li className="flex justify-between">
+              {/* <li className="flex justify-between">
                 <span>Minggu</span>
                 <span className="font-semibold">08:00 - 14:00</span>
-              </li>
+              </li> */}
               <li className="pt-3 border-t border-secondary-foreground/10">
-                <div className="text-primary font-semibold">Customer Service 24/7</div>
-                <div className="text-xs mt-1">via WhatsApp</div>
+                <div className="text-primary font-semibold">
+                  Customer Service 24/7
+                </div>
               </li>
             </ul>
           </div>
@@ -151,7 +151,8 @@ const Footer = () => {
         <div className="border-t border-secondary-foreground/10 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-sm text-secondary-foreground/60 text-center md:text-left">
-              © {new Date().getFullYear()} PT BARITO BERLIAN MOTOR. All rights reserved.
+              © {new Date().getFullYear()} PT BARITO BERLIAN MOTOR. All rights
+              reserved.
             </div>
             <div className="flex items-center gap-4 text-sm text-secondary-foreground/60">
               <a href="#" className="hover:text-primary transition-colors">

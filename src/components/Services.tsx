@@ -11,7 +11,7 @@ const services = [
   },
   {
     icon: Wrench,
-    title: "Servis Berkala",
+    title: "Perawatan Berkala",
     description:
       "Teknisi tersertifikasi dengan peralatan standar pabrikan untuk perawatan optimal kendaraan Anda.",
     color: "text-primary",

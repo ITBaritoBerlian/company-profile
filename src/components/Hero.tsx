@@ -1,15 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Wrench } from "lucide-react";
-import heroImage from "@/assets/hero-mitsubishi.jpg";
+import heroImage from "@/assets/hero.webp";
+import { Counter } from "@/components/ui/counter"; // <--- tambahin ini
+import { scrollToSection } from "@/lib/utils";
 
 const Hero = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section
       id="beranda"
@@ -30,12 +25,6 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-32">
         <div className="max-w-4xl">
-          {/* <div className="inline-block mb-6 px-4 py-2 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30">
-            <span className="text-primary-foreground text-sm font-medium">
-              🏆 Dealer Resmi #1 di Kalimantan
-            </span>
-          </div> */}
-
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight animate-fade-in-up">
             Dealer Resmi Mitsubishi Motors & FUSO di Kalimantan
           </h1>
@@ -44,8 +33,8 @@ const Hero = () => {
             className="text-lg md:text-xl text-primary-foreground/90 mb-4 max-w-3xl leading-relaxed animate-fade-in-up"
             style={{ animationDelay: "0.1s" }}
           >
-            <span className="font-semibold">
-              Penjualan • Servis • Suku Cadang • Bodi & Cat
+            <span className="text-sm sm:text-base font-semibold">
+              Penjualan • Perawatan Kendaraan • Suku Cadang • Bodi & Cat
             </span>
           </p>
 
@@ -65,9 +54,9 @@ const Hero = () => {
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2 text-base font-semibold h-14 px-8 shadow-lg hover:shadow-xl transition-all"
-              onClick={() => scrollToSection("model-promo")}
+              onClick={() => scrollToSection("kendaraan")}
             >
-              Lihat Model & Promo
+              Lihat Kendaraan
               <ArrowRight className="h-5 w-5" />
             </Button>
             <Button
@@ -77,7 +66,7 @@ const Hero = () => {
               onClick={() => scrollToSection("dealer")}
             >
               <Wrench className="h-5 w-5" />
-              Booking Servis
+              Booking Service
             </Button>
           </div>
 
@@ -88,31 +77,34 @@ const Hero = () => {
           >
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
-                5
+                <Counter to={5} />
               </div>
               <div className="text-sm text-primary-foreground/80">
                 Lokasi Dealer
               </div>
             </div>
+
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
-                15+
+                <Counter to={15} suffix="+" />
               </div>
               <div className="text-sm text-primary-foreground/80">
                 Tahun Pengalaman
               </div>
             </div>
+
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
-                100%
+                <Counter to={100} suffix="%" />
               </div>
               <div className="text-sm text-primary-foreground/80">
                 Suku Cadang Asli
               </div>
             </div>
+
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
-                24/7
+                <Counter to={24} suffix="/7" />
               </div>
               <div className="text-sm text-primary-foreground/80">
                 Customer Support

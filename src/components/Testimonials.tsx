@@ -50,7 +50,9 @@ const Testimonials = () => {
   };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   const getVisibleTestimonials = () => {
@@ -62,9 +64,12 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimoni" className="py-20 bg-muted/30 relative overflow-hidden">
+    <section
+      id="testimoni"
+      className="py-8 bg-muted/30 relative overflow-hidden"
+    >
       <div className="absolute inset-0 chevron-accent opacity-20" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
@@ -108,7 +113,10 @@ const Testimonials = () => {
               >
                 <div className="flex gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-primary text-primary" />
+                    <Star
+                      key={i}
+                      className="h-5 w-5 fill-primary text-primary"
+                    />
                   ))}
                 </div>
                 <p className="text-foreground mb-6 leading-relaxed italic">
@@ -116,8 +124,12 @@ const Testimonials = () => {
                 </p>
                 <div className="border-t border-border pt-4">
                   <div className="font-bold text-lg">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.location}</div>
-                  <div className="text-xs text-primary mt-1 font-medium">{testimonial.vehicle}</div>
+                  <div className="text-sm text-muted-foreground">
+                    {testimonial.location}
+                  </div>
+                  <div className="text-xs text-primary mt-1 font-medium">
+                    {testimonial.vehicle}
+                  </div>
                 </div>
               </Card>
             ))}
@@ -149,7 +161,9 @@ const Testimonials = () => {
               <button
                 key={index}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex ? "bg-primary w-8" : "bg-muted-foreground/30"
+                  index === currentIndex
+                    ? "bg-primary w-8"
+                    : "bg-muted-foreground/30"
                 }`}
                 onClick={() => setCurrentIndex(index)}
               />

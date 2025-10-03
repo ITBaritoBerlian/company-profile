@@ -4,7 +4,8 @@ const advantages = [
   {
     icon: Award,
     title: "Dealer Resmi & Teknisi Tersertifikasi",
-    description: "Tenaga ahli bersertifikat dari pabrikan untuk layanan terbaik",
+    description:
+      "Tenaga ahli bersertifikat dari pabrikan untuk layanan terbaik",
   },
   {
     icon: Shield,
@@ -25,7 +26,7 @@ const advantages = [
 
 const Advantages = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-8 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
@@ -52,7 +53,9 @@ const Advantages = () => {
                 <advantage.icon className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-lg font-bold mb-3">{advantage.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{advantage.description}</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {advantage.description}
+              </p>
             </div>
           ))}
         </div>
