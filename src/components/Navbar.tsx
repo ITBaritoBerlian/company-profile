@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { Instagram } from "lucide-react";
+import logo from "@/assets/bbm-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,10 +37,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <div className="w-14 h-14">
-              <img
-                src="/src/assets/BBM-LOGO.png"
-                alt="Logo PT BARITO BERLIAN MOTOR"
-              />
+              <img src={logo} alt="Logo PT BARITO BERLIAN MOTOR" />
             </div>
             <div className="hidden sm:block">
               <div className="font-oswald font-bold text-lg leading-tight">
