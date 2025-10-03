@@ -117,15 +117,19 @@ const Dealers = () => {
           ))}
         </div>
 
-        {/* Map Placeholder */}
+        {/* Google Maps Embed */}
         <div className="rounded-xl overflow-hidden shadow-lg mb-8 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-          <div className="aspect-[21/9] bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center">
-            <div className="text-center p-8">
-              <MapPin className="h-16 w-16 text-primary mx-auto mb-4" />
-              <p className="text-xl font-semibold mb-2">Peta Lokasi Dealer</p>
-              <p className="text-muted-foreground">3 cabang di Kalimantan untuk melayani Anda</p>
-            </div>
-          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127445.89094285745!2d114.67821475820315!3d-3.4294849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de6810c2a9ea46d%3A0x7c30a0e7d11e9e0a!2sBanjarmasin%2C%20South%20Kalimantan!5e0!3m2!1sen!2sid!4v1234567890123!5m2!1sen!2sid"
+            width="100%"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full"
+            title="Lokasi Dealer PT Barito Berlian Motor"
+          ></iframe>
         </div>
 
         {/* Contact Info Bar */}

@@ -2,35 +2,57 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MessageCircle, ChevronRight } from "lucide-react";
+import pajeroSportImg from "@/assets/pajero-sport.png";
+import l300Img from "@/assets/l300.png";
+import tritonImg from "@/assets/triton.png";
+import xpanderImg from "@/assets/xpander.png";
+import xpanderCrossImg from "@/assets/xpander-cross.png";
 
 const models = [
   {
-    name: "Mitsubishi Xpander",
-    category: "MPV",
-    features: ["7 Penumpang", "1.5L MIVEC", "Hemat BBM"],
-    badge: "Best Seller",
-    badgeColor: "bg-primary text-primary-foreground",
-  },
-  {
     name: "Mitsubishi Pajero Sport",
-    category: "SUV",
-    features: ["4WD", "Diesel Turbo", "Premium Interior"],
+    category: "SUV Premium",
+    description: "SUV tangguh dengan teknologi 4WD dan mesin diesel turbo yang bertenaga untuk petualangan tanpa batas.",
+    features: ["4WD Super Select", "2.4L MIVEC Diesel Turbo", "7 Penumpang", "Fitur Keselamatan Lengkap"],
     badge: "Premium",
-    badgeColor: "bg-secondary text-secondary-foreground",
+    badgeColor: "bg-primary text-primary-foreground",
+    image: pajeroSportImg,
   },
   {
     name: "Mitsubishi L300",
-    category: "Commercial",
-    features: ["Niaga", "Kargo Luas", "Handal"],
+    category: "Pick Up Niaga",
+    description: "Kendaraan niaga legendaris yang handal untuk bisnis Anda dengan daya angkut optimal.",
+    features: ["Mesin Bandel", "Daya Angkut 1 Ton", "Irit BBM", "Perawatan Mudah"],
     badge: "Workhorse",
-    badgeColor: "bg-muted text-muted-foreground",
+    badgeColor: "bg-secondary text-secondary-foreground",
+    image: l300Img,
   },
   {
-    name: "FUSO Canter",
-    category: "Truck",
-    features: ["Heavy Duty", "Euro 4", "Efisien"],
-    badge: "Industrial",
+    name: "Mitsubishi Triton",
+    category: "Pick Up",
+    description: "Pick up modern dengan performa tangguh, cocok untuk kerja maupun gaya hidup aktif.",
+    features: ["2.4L MIVEC Diesel", "4WD Available", "Kabin Luas", "Suspensi Nyaman"],
+    badge: "Tough",
     badgeColor: "bg-accent text-accent-foreground",
+    image: tritonImg,
+  },
+  {
+    name: "New Xpander",
+    category: "MPV",
+    description: "MPV keluarga terlaris dengan desain modern, kabin lapang, dan efisiensi bahan bakar terbaik.",
+    features: ["7 Penumpang", "1.5L MIVEC", "Kabin Luas", "Hemat BBM"],
+    badge: "Best Seller",
+    badgeColor: "bg-primary text-primary-foreground",
+    image: xpanderImg,
+  },
+  {
+    name: "Xpander Cross",
+    category: "Crossover MPV",
+    description: "Varian crossover dari Xpander dengan tampilan lebih adventure dan fitur lebih lengkap.",
+    features: ["Ground Clearance Tinggi", "Desain Adventure", "Teknologi Canggih", "Nyaman & Stylish"],
+    badge: "Adventure",
+    badgeColor: "bg-muted text-muted-foreground",
+    image: xpanderCrossImg,
   },
 ];
 
@@ -77,20 +99,20 @@ const Models = () => {
         </div>
 
         {/* Models Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {models.map((model, index) => (
             <Card
               key={index}
               className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group animate-scale-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Placeholder for model image */}
-              <div className="aspect-[4/3] bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 chevron-accent opacity-20" />
-                <div className="relative z-10 text-center p-6">
-                  <div className="text-6xl mb-2">🚗</div>
-                  <div className="text-xl font-bold">{model.name}</div>
-                </div>
+              {/* Model image */}
+              <div className="aspect-[4/3] bg-background relative overflow-hidden">
+                <img 
+                  src={model.image} 
+                  alt={model.name}
+                  className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
               
               <div className="p-6">
@@ -101,7 +123,10 @@ const Models = () => {
                   <span className="text-sm text-muted-foreground">{model.category}</span>
                 </div>
                 
-                <h3 className="text-xl font-bold mb-3">{model.name}</h3>
+                <h3 className="text-xl font-bold mb-2">{model.name}</h3>
+                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                  {model.description}
+                </p>
                 
                 <ul className="space-y-2 mb-4">
                   {model.features.map((feature, idx) => (
