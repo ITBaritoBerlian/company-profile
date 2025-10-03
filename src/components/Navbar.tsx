@@ -26,43 +26,47 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-background"
+        isScrolled
+          ? "bg-background/95 backdrop-blur-md shadow-lg"
+          : "bg-background"
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-primary rounded-md flex items-center justify-center">
-              <span className="text-primary-foreground font-oswald font-bold text-xl">BBM</span>
+            <div className="w-14 h-14">
+              <img
+                src="/src/assets/BBM-LOGO.png"
+                alt="Logo PT BARITO BERLIAN MOTOR"
+              />
             </div>
             <div className="hidden sm:block">
               <div className="font-oswald font-bold text-lg leading-tight">
                 PT BARITO BERLIAN MOTOR
               </div>
-              <div className="text-xs text-muted-foreground">Dealer Resmi Mitsubishi</div>
             </div>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
-            <button
+            {/* <button
               onClick={() => scrollToSection("beranda")}
               className="text-sm font-medium hover:text-primary transition-colors"
             >
               Beranda
-            </button>
-            <button
-              onClick={() => scrollToSection("model-promo")}
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              Model & Promo
-            </button>
+            </button> */}
             <button
               onClick={() => scrollToSection("layanan")}
               className="text-sm font-medium hover:text-primary transition-colors"
             >
               Layanan
+            </button>
+            <button
+              onClick={() => scrollToSection("kendaraan")}
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
+              Kendaraan
             </button>
             <button
               onClick={() => scrollToSection("dealer")}
@@ -90,7 +94,9 @@ const Navbar = () => {
               variant="outline"
               size="sm"
               className="gap-2"
-              onClick={() => window.open("https://wa.me/6281262699800", "_blank")}
+              onClick={() =>
+                window.open("https://wa.me/6281262699800", "_blank")
+              }
             >
               <MessageCircle className="h-4 w-4" />
               WhatsApp
@@ -99,7 +105,12 @@ const Navbar = () => {
               variant="outline"
               size="sm"
               className="gap-2"
-              onClick={() => window.open("https://instagram.com/mitsubishi.baritoberlian", "_blank")}
+              onClick={() =>
+                window.open(
+                  "https://instagram.com/mitsubishi.baritoberlian",
+                  "_blank"
+                )
+              }
             >
               <Instagram className="h-4 w-4" />
               Instagram
@@ -167,7 +178,9 @@ const Navbar = () => {
                 variant="outline"
                 size="sm"
                 className="gap-2 justify-start"
-                onClick={() => window.open("https://wa.me/6281262699800", "_blank")}
+                onClick={() =>
+                  window.open("https://wa.me/6281262699800", "_blank")
+                }
               >
                 <MessageCircle className="h-4 w-4" />
                 WhatsApp
@@ -176,7 +189,12 @@ const Navbar = () => {
                 variant="outline"
                 size="sm"
                 className="gap-2 justify-start"
-                onClick={() => window.open("https://instagram.com/mitsubishi.baritoberlian", "_blank")}
+                onClick={() =>
+                  window.open(
+                    "https://instagram.com/mitsubishi.baritoberlian",
+                    "_blank"
+                  )
+                }
               >
                 <Instagram className="h-4 w-4" />
                 Instagram

@@ -11,7 +11,10 @@ const Hero = () => {
   };
 
   return (
-    <section id="beranda" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="beranda"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
@@ -27,25 +30,38 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-32">
         <div className="max-w-4xl">
-          <div className="inline-block mb-6 px-4 py-2 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30">
+          {/* <div className="inline-block mb-6 px-4 py-2 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30">
             <span className="text-primary-foreground text-sm font-medium">
               🏆 Dealer Resmi #1 di Kalimantan
             </span>
-          </div>
-          
+          </div> */}
+
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight animate-fade-in-up">
             Dealer Resmi Mitsubishi Motors & FUSO di Kalimantan
           </h1>
-          
-          <p className="text-lg md:text-xl text-primary-foreground/90 mb-4 max-w-3xl leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            <span className="font-semibold">Penjualan • Servis • Suku Cadang • Bodi & Cat</span>
-          </p>
-          
-          <p className="text-base md:text-lg text-primary-foreground/80 mb-10 max-w-2xl animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Layanan resmi untuk pengalaman berkendara terbaik. Teknisi tersertifikasi, suku cadang asli, dan fasilitas modern di seluruh Kalimantan.
+
+          <p
+            className="text-lg md:text-xl text-primary-foreground/90 mb-4 max-w-3xl leading-relaxed animate-fade-in-up"
+            style={{ animationDelay: "0.1s" }}
+          >
+            <span className="font-semibold">
+              Penjualan • Servis • Suku Cadang • Bodi & Cat
+            </span>
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          <p
+            className="text-base md:text-lg text-primary-foreground/80 mb-10 max-w-2xl animate-fade-in-up"
+            style={{ animationDelay: "0.2s" }}
+          >
+            Layanan resmi untuk pengalaman berkendara terbaik. Teknisi
+            tersertifikasi, suku cadang asli, dan fasilitas modern di seluruh
+            Kalimantan.
+          </p>
+
+          <div
+            className="flex flex-col sm:flex-row gap-4 animate-fade-in-up"
+            style={{ animationDelay: "0.3s" }}
+          >
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2 text-base font-semibold h-14 px-8 shadow-lg hover:shadow-xl transition-all"
@@ -58,7 +74,7 @@ const Hero = () => {
               size="lg"
               variant="outline"
               className="bg-background/10 backdrop-blur-sm border-primary-foreground/30 text-primary-foreground hover:bg-background/20 gap-2 text-base font-semibold h-14 px-8"
-              onClick={() => window.open("https://wa.me/6281262699800", "_blank")}
+              onClick={() => scrollToSection("dealer")}
             >
               <Wrench className="h-5 w-5" />
               Booking Servis
@@ -66,22 +82,41 @@ const Hero = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+          <div
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 animate-fade-in-up"
+            style={{ animationDelay: "0.4s" }}
+          >
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">3</div>
-              <div className="text-sm text-primary-foreground/80">Lokasi Dealer</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
+                5
+              </div>
+              <div className="text-sm text-primary-foreground/80">
+                Lokasi Dealer
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">15+</div>
-              <div className="text-sm text-primary-foreground/80">Tahun Pengalaman</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
+                15+
+              </div>
+              <div className="text-sm text-primary-foreground/80">
+                Tahun Pengalaman
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">100%</div>
-              <div className="text-sm text-primary-foreground/80">Suku Cadang Asli</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
+                100%
+              </div>
+              <div className="text-sm text-primary-foreground/80">
+                Suku Cadang Asli
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">24/7</div>
-              <div className="text-sm text-primary-foreground/80">Customer Support</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
+                24/7
+              </div>
+              <div className="text-sm text-primary-foreground/80">
+                Customer Support
+              </div>
             </div>
           </div>
         </div>
