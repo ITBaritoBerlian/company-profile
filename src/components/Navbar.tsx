@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { Instagram } from "lucide-react";
-import logo from "@/assets/bbm-logo.png";
+import logo from "@/assets/BBM-LOGO.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
