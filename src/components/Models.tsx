@@ -76,6 +76,20 @@ type Model = {
 
 const models: Model[] = [
   {
+    name: "DESTINATOR",
+    category: "7-Seater SUV / Crossover",
+    description:
+      "SUV 7 penumpang turbo terbaru dengan desain premium, kabin nyaman, dan fitur keselamatan modern.",
+    features: [
+      "Mesin 1.5L Turbo 163 PS",
+      "Ground Clearance 244 mm",
+      "Adaptive Cruise Control + Kamera 360°",
+    ],
+    image: destinatorImg,
+    frames: destinatorFrames,
+    brochureUrl: brosurDestinator,
+  },
+  {
     name: "NEW PAJERO SPORT",
     category: "SUV Premium",
     description:
@@ -144,20 +158,6 @@ const models: Model[] = [
     image: xpanderCrossImg,
     frames: xpanderCrossFrames,
     brochureUrl: brosurXpanderCross,
-  },
-  {
-    name: "DESTINATOR",
-    category: "7-Seater SUV / Crossover",
-    description:
-      "SUV 7 penumpang turbo terbaru dengan desain premium, kabin nyaman, dan fitur keselamatan modern.",
-    features: [
-      "Mesin 1.5L Turbo 163 PS",
-      "Ground Clearance 244 mm",
-      "Adaptive Cruise Control + Kamera 360°",
-    ],
-    image: destinatorImg,
-    frames: destinatorFrames,
-    brochureUrl: brosurDestinator,
   },
 ];
 

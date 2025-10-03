@@ -93,17 +93,6 @@ const Navbar = () => {
               size="sm"
               className="gap-2"
               onClick={() =>
-                window.open("https://wa.me/6281262699800", "_blank")
-              }
-            >
-              <MessageCircle className="h-4 w-4" />
-              WhatsApp
-            </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              className="gap-2"
-              onClick={() =>
                 window.open(
                   "https://instagram.com/mitsubishi.baritoberlian",
                   "_blank"
@@ -112,14 +101,6 @@ const Navbar = () => {
             >
               <Instagram className="h-4 w-4" />
               Instagram
-            </Button>
-            <Button
-              size="sm"
-              className="gap-2 bg-primary hover:bg-primary/90"
-              onClick={() => window.open("tel:05114705800", "_blank")}
-            >
-              <Phone className="h-4 w-4" />
-              Telepon
             </Button>
           </div>
 
