@@ -77,7 +77,7 @@ const Testimonials = () => {
               Testimoni
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-mmcBold">
             Kata Pelanggan Kami
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -123,7 +123,9 @@ const Testimonials = () => {
                   "{testimonial.text}"
                 </p>
                 <div className="border-t border-border pt-4">
-                  <div className="font-bold text-lg">{testimonial.name}</div>
+                  <div className="font-bold text-lg font-mmcBold">
+                    {testimonial.name}
+                  </div>
                   <div className="text-sm text-muted-foreground">
                     {testimonial.location}
                   </div>

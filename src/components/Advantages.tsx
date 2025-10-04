@@ -9,7 +9,7 @@ const advantages = [
   },
   {
     icon: Shield,
-    title: "Suku Cadang Asli Pabrikan",
+    title: "Suku Cadang Asli ATPM",
     description: "Garansi keaslian 100% untuk performa optimal kendaraan",
   },
   {
@@ -34,7 +34,7 @@ const Advantages = () => {
               Mengapa Kami?
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-mmcBold">
             Keunggulan Kami
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

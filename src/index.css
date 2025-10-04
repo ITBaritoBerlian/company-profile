@@ -121,3 +121,17 @@ All colors MUST be HSL.
     pointer-events: none;
   }
 }
+
+@font-face {
+  font-family: 'MMC';
+  src: url('/src/assets/fonts/MMCOFFICE-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'MMC-Bold';
+  src: url('/src/assets/fonts/MMCOFFICE-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}

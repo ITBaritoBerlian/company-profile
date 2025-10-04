@@ -47,7 +47,7 @@ const Services = () => {
               Layanan Resmi
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-mmcBold">
             Layanan Lengkap & Profesional
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -68,7 +68,9 @@ const Services = () => {
               >
                 <service.icon className={`h-7 w-7 ${service.color}`} />
               </div>
-              <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+              <h3 className="text-xl font-bold mb-3 font-mmcBold">
+                {service.title}
+              </h3>
               <p className="text-muted-foreground leading-relaxed">
                 {service.description}
               </p>

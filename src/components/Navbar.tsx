@@ -33,7 +33,7 @@ const Navbar = () => {
               <img src={logo} alt="Logo PT BARITO BERLIAN MOTOR" />
             </div>
             <div className="block">
-              <div className="font-oswald font-bold text-lg leading-tight">
+              <div className="font-mmcBold text-lg leading-tight">
                 PT BARITO BERLIAN MOTOR
               </div>
             </div>

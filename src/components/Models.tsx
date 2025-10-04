@@ -187,7 +187,7 @@ const Models = () => {
               Kendaraan
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-mmcBold">
             Pilihan Kendaraan Terbaik
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -201,7 +201,7 @@ const Models = () => {
           <div className="absolute inset-0 chevron-accent opacity-20" />
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-4">
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-2">
+              <h3 className="text-2xl md:text-3xl font-bold mb-2 font-mmcBold">
                 🎉 Promo Spesial Bulan Ini!
               </h3>
               <p className="text-primary-foreground/90 text-lg">
@@ -261,7 +261,9 @@ const Models = () => {
                   </span>
                 </div>
 
-                <h3 className="text-xl font-bold mb-2">{model.name}</h3>
+                <h3 className="text-xl font-bold mb-2 font-mmcBold">
+                  {model.name}
+                </h3>
                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                   {model.description}
                 </p>
@@ -340,7 +342,9 @@ const Models = () => {
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="sm:max-w-3xl">
           <DialogHeader>
-            <DialogTitle>{activeModel?.name ?? "3D Preview"}</DialogTitle>
+            <DialogTitle className="font-mmcBold">
+              {activeModel?.name ?? "3D Preview"}
+            </DialogTitle>
             <DialogDescription>
               Geser kiri/kanan pada gambar untuk memutar tampilan 360°
             </DialogDescription>

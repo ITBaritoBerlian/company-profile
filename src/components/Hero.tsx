@@ -25,7 +25,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-32">
         <div className="max-w-4xl">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight animate-fade-in-up">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight animate-fade-in-up font-mmcBold">
             Dealer Resmi Mitsubishi Motors & FUSO di Kalimantan
           </h1>
 
@@ -33,7 +33,7 @@ const Hero = () => {
             className="text-lg md:text-xl text-primary-foreground/90 mb-4 max-w-3xl leading-relaxed animate-fade-in-up"
             style={{ animationDelay: "0.1s" }}
           >
-            <span className="text-sm sm:text-base font-semibold">
+            <span className="text-sm sm:text-base font-semibold font-mmcBold">
               Penjualan • Perawatan Kendaraan • Suku Cadang • Bodi & Cat
             </span>
           </p>
@@ -43,8 +43,8 @@ const Hero = () => {
             style={{ animationDelay: "0.2s" }}
           >
             Layanan resmi untuk pengalaman berkendara terbaik. Teknisi
-            tersertifikasi, suku cadang asli, dan fasilitas modern di seluruh
-            Kalimantan.
+            tersertifikasi, suku cadang asli ATPM, dan fasilitas modern di
+            seluruh Kalimantan.
           </p>
 
           <div
@@ -76,7 +76,7 @@ const Hero = () => {
             style={{ animationDelay: "0.4s" }}
           >
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-1 font-mmcBold">
                 <Counter to={5} />
               </div>
               <div className="text-sm text-primary-foreground/80">
@@ -85,7 +85,7 @@ const Hero = () => {
             </div>
 
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-1 font-mmcBold">
                 <Counter to={15} suffix="+" />
               </div>
               <div className="text-sm text-primary-foreground/80">
@@ -94,16 +94,16 @@ const Hero = () => {
             </div>
 
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-1 font-mmcBold">
                 <Counter to={100} suffix="%" />
               </div>
               <div className="text-sm text-primary-foreground/80">
-                Suku Cadang Asli
+                Suku Cadang Asli ATPM
               </div>
             </div>
 
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-1 font-mmcBold">
                 <Counter to={24} suffix="/7" />
               </div>
               <div className="text-sm text-primary-foreground/80">

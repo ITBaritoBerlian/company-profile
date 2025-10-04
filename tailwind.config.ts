@@ -16,6 +16,8 @@ export default {
       fontFamily: {
         oswald: ['Oswald', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
+        mmc: ['MMC', 'sans-serif'],
+        mmcBold: ['MMC-Bold', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

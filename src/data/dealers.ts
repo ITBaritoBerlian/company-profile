@@ -1,11 +1,12 @@
 export type Dealer = {
   name: string;
   address: string;
-  phone: string;
+  phone?: string;
   whatsappService?: string;
   whatsappSales?: string;
   whatsappBooking?: string;
-  mapUrl: string;
+  mapUrl?: string;
+  comingSoon?: boolean;
 };
 
 export const dealers: Dealer[] = [
@@ -35,4 +36,14 @@ export const dealers: Dealer[] = [
     mapUrl:
       "https://maps.app.goo.gl/YNTMD4Juuz9tGaig7",
   },
+  {
+    name: "Palangka Raya",
+    address: "Segera Hadir di Palangka Raya",
+    comingSoon: true,
+  },
+  {
+    name: "Kereng Pangi",
+    address: "Segera Hadir di Kereng Pangi",
+    comingSoon: true,
+  }
 ];
